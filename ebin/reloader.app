@@ -1,0 +1,11 @@
+{application,reloader,
+             [{description,"Diagnostic tools for production use"},
+              {vsn,"2.3.2"},
+              {modules,[mod_reloader,reloader_app,reloader_sup,util_file]},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{reloader_app,[]}},
+              {env,[{src,"src"}]},
+              {maintainers,["Fred Hebert"]},
+              {licenses,["BSD"]},
+              {files,["src/","script/","rebar.lock","README.md","LICENSE"]}]}.
