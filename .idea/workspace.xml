@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24d300a0-60b3-4e48-8cf4-42c9d0c416e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/sys.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/vm.args" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reloader_config.erl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rebar.config" beforeDir="false" afterPath="$PROJECT_DIR$/rebar.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mod_reloader.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/reloader_srv.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_build/default/lib/reloader/.rebar3/rebar_compiler_erl/source.dag" beforeDir="false" afterPath="$PROJECT_DIR$/_build/default/lib/reloader/.rebar3/rebar_compiler_erl/source.dag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_build/default/lib/reloader/ebin/reloader_app.beam" beforeDir="false" afterPath="$PROJECT_DIR$/_build/default/lib/reloader/ebin/reloader_app.beam" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_build/default/lib/reloader/ebin/reloader_srv.beam" beforeDir="false" afterPath="$PROJECT_DIR$/_build/default/lib/reloader/ebin/reloader_srv.beam" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sys.config" beforeDir="false" afterPath="$PROJECT_DIR$/config/sys.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ebin/mod_reloader.beam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ebin/reloader.app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ebin/reloader_app.beam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ebin/reloader_sup.beam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ebin/util_file.beam" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reloader_app.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/reloader_app.erl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util_file.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/reloader_file.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reloader_srv.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/reloader_srv.erl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,65 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reloader_srv.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="809">
+              <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reloader_file.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/erl8.3/lib/kernel-5.2/src/file.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="346" selection-start-line="346" selection-end-line="346" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/erl8.3/lib/erts-8.3/src/erlang.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="1159" selection-start-line="1159" selection-end-line="1159" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sys.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reloader.app.src">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reloader_app.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="-136">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -95,10 +55,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/erl8.3/lib/kernel-5.2/src/application.erl">
+        <entry file="file://$PROJECT_DIR$/src/reloader_file.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/sys.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/erl8.3/lib/kernel-5.2/src/code.erl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
-              <caret line="333" selection-start-line="333" selection-end-line="333" />
+              <caret line="171" selection-start-line="171" selection-end-line="171" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/erl8.3/lib/compiler-7.0.4/src/compile.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
             </state>
           </provider>
         </entry>
@@ -172,7 +159,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555235599514" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555329792044" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
@@ -297,17 +284,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reloader_file.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/erl8.3/lib/kernel-5.2/src/file.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="346" selection-start-line="346" selection-end-line="346" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/erl8.3/lib/kernel-5.2/src/code.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/erl8.3/lib/compiler-7.0.4/src/compile.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/sys.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reloader_app.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -318,24 +326,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/reloader_file.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/reloader_srv.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sys.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reloader_app.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="809">
+          <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
         </state>
       </provider>
     </entry>

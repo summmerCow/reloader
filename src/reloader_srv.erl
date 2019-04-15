@@ -39,16 +39,15 @@ check_and_load(#state{files = Files, com_opt = ComOpt, last_time = LastTime}) ->
     Fun = fun({File, Module}) ->
         case reloader_file:read_file_info(File) of
             {ok, #file_info{mtime = MinTime}} when MinTime >= LastTime andalso MinTime =< NowTime ->
-                compile:file(File, ComOpt),
-                case code:soft_purge(Module) of
-                    true ->
-                        ?ERROR_MSG(" ~p~n", [Module]),
-                        code:load_file(Module);
-                    false ->
-                        ?ERROR_MSG("hot_update fail:~p", [Module])
-                end;
-            V ->
-                V
+
+                Binary1 = case compile:file(File, [binary|ComOpt]) of
+                              {ok,Module,Binary}->Binary;
+                              {ok,Module,Binary,_}->Binary;
+                              _->undefined
+                          end,
+                load_module(Module,File,Binary1);
+            _ ->
+                skip
         end
           end,
     lists:foreach(Fun, Files).
@@ -57,6 +56,13 @@ check_and_load(#state{files = Files, com_opt = ComOpt, last_time = LastTime}) ->
 start_check_timer() ->
     erlang:start_timer(reloader_config:check_interval(), self(), check).
 
+load_module(Module,File,Binary) when is_binary(Binary)->
+    code:purge(Module),
+    code:load_binary(Module,File,Binary),
+    ?ERROR_MSG(" ~p~n", [Module]);
+
+load_module(_,_,_)->
+    skip.
 
 files() ->
     Fun = fun(File) ->
