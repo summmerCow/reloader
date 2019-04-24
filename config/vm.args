@@ -16,6 +16,5 @@
 
 -env ERL_MAX_ETS_TABLES 10000
 
--name reloader@${NODE_NAME_SUFFIX}
--setcookie ${BG_COOKIE}
--hidden
+-name reloader@127.0.0.1
+-setcookie abc

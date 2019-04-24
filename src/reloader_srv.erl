@@ -25,13 +25,17 @@ init() ->
     loop(#state{files = files(), com_opt = Opt, last_time = ?NOW}).
 
 loop(State) ->
+    Self = self(),
     receive
         {timeout, _, check} ->
             check_and_load(State),
             start_check_timer(),
             loop(State#state{last_time = ?NOW});
+        {'EXIT', Self, Reason} ->
+            ?ERROR_MSG("down ~p~n", [Reason]);
         Msg ->
-            ?ERROR_MSG(" ~p~n", [Msg])
+            ?ERROR_MSG(" ~p~n", [Msg]),
+            loop(State)
     end.
 
 check_and_load(#state{files = Files, com_opt = ComOpt, last_time = LastTime}) ->
@@ -40,12 +44,12 @@ check_and_load(#state{files = Files, com_opt = ComOpt, last_time = LastTime}) ->
         case reloader_file:read_file_info(File) of
             {ok, #file_info{mtime = MinTime}} when MinTime >= LastTime andalso MinTime =< NowTime ->
 
-                Binary1 = case compile:file(File, [binary|ComOpt]) of
-                              {ok,Module,Binary}->Binary;
-                              {ok,Module,Binary,_}->Binary;
-                              _->undefined
+                Binary1 = case compile:file(File, [binary | ComOpt]) of
+                              {ok, Module, Binary} -> Binary;
+                              {ok, Module, Binary, _} -> Binary;
+                              _ -> undefined
                           end,
-                load_module(Module,File,Binary1);
+                load_module(Module, File, Binary1);
             _ ->
                 skip
         end
@@ -56,12 +60,12 @@ check_and_load(#state{files = Files, com_opt = ComOpt, last_time = LastTime}) ->
 start_check_timer() ->
     erlang:start_timer(reloader_config:check_interval(), self(), check).
 
-load_module(Module,File,Binary) when is_binary(Binary)->
+load_module(Module, File, Binary) when is_binary(Binary) ->
     code:purge(Module),
-    code:load_binary(Module,File,Binary),
+    code:load_binary(Module, File, Binary),
     ?ERROR_MSG(" ~p~n", [Module]);
 
-load_module(_,_,_)->
+load_module(_, _, _) ->
     skip.
 
 files() ->
